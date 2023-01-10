@@ -1,0 +1,12 @@
+<h3>This is the Pwfield Component</h3>
+<hr>
+<app-button (click)="changeDisplay()"></app-button>
+<hr>
+<p *ngIf="isDisplay(); else isNotDisplay">Hello how are you.</p>
+<ng-template #isNotDisplay>    
+</ng-template>
+<hr>
+<p *ngIf="count < 4 ; else moreThanFive" ><p *ngFor="let time of clickLog" >Click time {{ time }}</p>
+<ng-template #moreThanFive>
+    <p [ngStyle]="{backgroundColor: bgColor, color: fontColor}">Click time {{ time }}</p>
+</ng-template>
