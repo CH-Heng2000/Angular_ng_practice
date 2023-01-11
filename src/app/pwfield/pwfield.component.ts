@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-pwfield',
-    templateUrl: './pwfield.component.html'
+    templateUrl: './pwfield.component.html',
+    styleUrls: ['./pwfield.component.css']
 })
 export class pwfieldComponent{
     displayStatus : boolean;
@@ -36,6 +37,10 @@ export class pwfieldComponent{
 
     isDisplay(): boolean{
         return this.displayStatus
+    }
+
+    getBgColor(): string{
+        return this.bgColor
     }
 
 }

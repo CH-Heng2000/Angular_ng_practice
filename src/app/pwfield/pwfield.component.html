@@ -6,7 +6,9 @@
 <ng-template #isNotDisplay>    
 </ng-template>
 <hr>
-<p *ngIf="count < 4 ; else moreThanFive" ><p *ngFor="let time of clickLog" >Click time {{ time }}</p>
-<ng-template #moreThanFive>
-    <p [ngStyle]="{backgroundColor: bgColor, color: fontColor}">Click time {{ time }}</p>
-</ng-template>
+<div>
+    <li *ngFor="let time of clickLog; let i = index" >
+        <ul [ngStyle] = "{backgroundColor: i > 3 ? 'blue' : ''}" [ngClass]="i > 3 ? 'fColora5' : 'fColoru4'">Click time {{ i+1 }} </ul>
+    </li>
+</div>
+
